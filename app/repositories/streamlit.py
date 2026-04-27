@@ -1,7 +1,7 @@
 import streamlit as st
 
-from repositories import ChatSessionRepository
-from models import Chat, ChatSession
+from app.repositories import ChatSessionRepository
+from app.models import Chat, ChatSession
 
 
 class StreamlitSessionRepository(ChatSessionRepository):

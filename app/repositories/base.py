@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from models import Chat, ChatSession
+from app.models import Chat, ChatSession
 
 
 class ChatSessionRepository(ABC):

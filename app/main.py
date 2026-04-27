@@ -1,6 +1,6 @@
-from config import settings
-from controllers.fastapi.app import run_fastapi_app
-from controllers.streamlit.app import run_streamlit_app
+from app.config import settings
+from app.controllers.fastapi.app import run_fastapi_app
+from app.controllers.streamlit.app import run_streamlit_app
 
 
 def main():
@@ -11,8 +11,7 @@ def main():
         run_streamlit_app()
     elif mode == "fastapi":
         import uvicorn
-
-        uvicorn.run("main:run_fastapi_app", host="0.0.0.0", port=8000, factory=True)
+        uvicorn.run("app.main:run_fastapi_app", host="0.0.0.0", port=8000, factory=True)
     else:
         raise ValueError(f"Invalid APP_MODE: '{mode}'. Use 'streamlit' or 'fastapi'.")
 

@@ -3,27 +3,27 @@ from langchain_core.runnables import Runnable
 from langchain.chat_models import init_chat_model
 from typing import Generator
 
-from models import (
+from app.models import (
     Gauge,
     TimeCapsule,
     TodaySentimentReportOutput,
     ChatSession,
     DailyReport,
 )
-from prompt.prompt_factory import (
+from app.prompt.prompt_factory import (
     make_chat_prompt_template,
     make_sentiment_prompt_template,
     make_timecapsule_prompt_template,
     make_gauge_prompt_template,
     make_daily_report_prompt_template,
 )
-from prompt import (
+from app.prompt import (
     GAUGE_PARSER,
     SENTIMENT_OUTPUT_PARSER,
     TIMECAPSULE_PARSER,
     DAILY_REPORT_PARSER,
 )
-from repositories import ChatSessionRepository
+from app.repositories import ChatSessionRepository
 
 
 class ChatService:

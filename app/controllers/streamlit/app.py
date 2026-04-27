@@ -1,5 +1,5 @@
-from repositories import StreamlitSessionRepository
-from services import ChatService
+from app.repositories import StreamlitSessionRepository
+from app.services import ChatService
 
 
 def build_streamlit_service():
@@ -8,8 +8,8 @@ def build_streamlit_service():
 
 
 def setup_streamlit_app(chat_service: ChatService, debug: bool = False):
-    from controllers.streamlit import init_session
-    from controllers.streamlit.views import run_main_ui, run_api_key_ui
+    from app.controllers.streamlit import init_session
+    from app.controllers.streamlit.views import run_main_ui, run_api_key_ui
 
     if debug:
         from dotenv import load_dotenv

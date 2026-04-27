@@ -47,7 +47,7 @@ class ChatSession(BaseModel):
 
     def update_gauge_scores(self, new_gauge):
         """새로운 게이지 점수를 누적하여 업데이트"""
-        from models import Gauge
+        from app.models import Gauge
         
         self.gauge_score = max(self.gauge_score, new_gauge.gauge_score)
         self.emotion_expression_score = max(self.emotion_expression_score, new_gauge.emotion_expression_score)
@@ -58,7 +58,7 @@ class ChatSession(BaseModel):
 
     def get_cumulative_gauge(self):
         """누적된 게이지 점수를 Gauge 객체로 반환"""
-        from models import Gauge
+        from app.models import Gauge
         
         return Gauge(
             gauge_score=self.gauge_score,

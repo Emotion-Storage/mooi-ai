@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import PydanticOutputParser
 
-from models import TimeCapsule, TodaySentimentReportOutput, Gauge, DailyReport
+from app.models import TimeCapsule, TodaySentimentReportOutput, Gauge, DailyReport
 
 GAUGE_PARSER = PydanticOutputParser(pydantic_object=Gauge)
 TIMECAPSULE_PARSER = PydanticOutputParser(pydantic_object=TimeCapsule)

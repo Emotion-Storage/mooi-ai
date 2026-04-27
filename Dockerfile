@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["python", "app/main_prod.py"]
+CMD ["python", "-m", "app.main_prod"]

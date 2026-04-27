@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import uvicorn
-from controllers.fastapi.app import run_fastapi_app
+from app.controllers.fastapi.app import run_fastapi_app
 
 load_dotenv()
 

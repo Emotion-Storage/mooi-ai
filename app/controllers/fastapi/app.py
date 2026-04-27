@@ -2,7 +2,7 @@ import asyncio
 import json
 from typing import AsyncIterator, Optional
 
-from models import (
+from app.models import (
     Chat,
     ChatRequest,
     ChatResponse,
@@ -16,9 +16,9 @@ from models import (
     TimeCapsuleRequest,
     TodaySentimentReportOutput,
 )
-from repositories import InMemoryChatSessionRepository
-from services import ChatService
-from prompt.defaults import (
+from app.repositories import InMemoryChatSessionRepository
+from app.services import ChatService
+from app.prompt.defaults import (
     DEFAULT_CHATBOT_PROMPT_MESSAGE,
     DEFAULT_DAILY_REPORT_ANALYZE_PROMPT_MESSAGE,
     DEFAULT_DAILY_REPORT_REFERENCE_PROMPT_MESSAGE,

@@ -1,5 +1,5 @@
-from models import Chat, ChatSession
-from repositories import ChatSessionRepository
+from app.models import Chat, ChatSession
+from app.repositories import ChatSessionRepository
 
 
 class InMemoryChatSessionRepository(ChatSessionRepository):

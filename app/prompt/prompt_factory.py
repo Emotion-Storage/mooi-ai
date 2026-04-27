@@ -1,7 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 
-from models import ChatSession
-from prompt.defaults import FORMATTING_MESSAGE
+from app.models import ChatSession
+from app.prompt.defaults import FORMATTING_MESSAGE
 
 
 def make_chat_prompt_template(system_message: str, session: ChatSession):
